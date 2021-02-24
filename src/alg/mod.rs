@@ -1,5 +1,7 @@
 pub mod flipping_an_image;
 pub mod grumpy_bookstore_owner;
+pub mod is_unique_lcci;
+pub mod longest_common_prefix;
 pub mod reverse_integer;
 pub mod roman_to_integer;
 pub mod toeplitz_matrix;
