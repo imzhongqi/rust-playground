@@ -1,17 +1,12 @@
 pub fn max_area(height: Vec<i32>) -> i32 {
-    let (mut left, mut right) = (0, height.len() - 1);
-    let mut max_area = 0;
+    let (mut left, mut right, mut max_area) = (0, height.len() - 1, 0);
     while left < right {
-        let h = if height[left] < height[right] {
-            height[left]
-        } else {
-            height[right]
-        };
-        let area = (right - left) as i32 * h;
-        max_area = if area > max_area { area } else { max_area };
+        let calc_area = |height| max_area.max((right - left) as i32 * height);
         if height[left] < height[right] {
+            max_area = calc_area(height[left]);
             left += 1;
         } else {
+            max_area = calc_area(height[right]);
             right -= 1;
         }
     }
