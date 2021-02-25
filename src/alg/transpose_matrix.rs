@@ -23,5 +23,5 @@ fn test_transpose() {
         transpose(vec![vec![1, 2, 3], vec![4, 5, 6]]),
         vec![vec![1, 4], vec![2, 5], vec![3, 6]]
     );
-    assert_eq!(transpose(vec![]), 0);
+    assert_eq!(transpose(vec![]), Vec::<Vec<_>>::new());
 }
