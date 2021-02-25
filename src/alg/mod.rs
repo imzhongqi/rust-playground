@@ -5,4 +5,5 @@ pub mod longest_common_prefix;
 pub mod reverse_integer;
 pub mod roman_to_integer;
 pub mod toeplitz_matrix;
+pub mod transpose_matrix;
 pub mod two_sum;
